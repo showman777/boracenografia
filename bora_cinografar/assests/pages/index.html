@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<link rel="stylesheet" href="../css/styleIndex/estilo.css">
+
+
+
+
+
+
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cenografia Criativa</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    /* Menu responsivo */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1e3a8a;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
+
+  
+</head>
+<body>
+
+  <header>
+    <h1>Bora Cenografia</h1>
+    <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#novidades">Novidades</a></li>
+        <li><a href="#empresa">Informações</a></li>
+        <li><a href="#contato">Contatos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="inicio">
+      <h2>Bem-vindo à Bora Cenografia</h2>
+      <p>Somos especialistas em transformar ambientes com cenografias únicas e impactantes.</p>
+    </section>
+
+    <section id="novidades">
+      <h2>Novidades</h2>
+      <ul>
+        <li>Novos cenários temáticos para feiras e eventos.</li>
+        <li>Parceria com produtores de cinema e TV.</li>
+      </ul>
+    </section>
+
+    <section id="empresa">
+      <h2>Informações da Empresa</h2>
+      <p>Fundada em 2012, nossa missão é entregar cenografia com criatividade, segurança e excelência.</p>
+    </section>
+
+    <section id="contato">
+      <h2>Contatos</h2>
+      <p>Email: contato@cenografiacriativa.com</p>
+      <p>Telefone: (11) 99999-9999</p>
+      <p>Endereço: Av. Imaginária, 1000 – São Paulo, SP</p>
+    </section>
+  </main>
+
+  <footer style="text-align: center; padding: 10px; background: #f1f1f1;">
+    &copy; 2025 Cenografia Criativa. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>

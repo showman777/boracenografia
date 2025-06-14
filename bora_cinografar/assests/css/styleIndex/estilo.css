@@ -1,0 +1,145 @@
+:root {
+  --cor-primaria: #0f172a;
+  --cor-secundaria: #1e3a8a;
+  --cor-destaque: #38bdf8;
+  --cor-fundo: #f8fafc;
+  --cor-texto: #111827;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(to right, var(--cor-secundaria), var(--cor-primaria));
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: var(--cor-destaque);
+  transition: width 0.3s;
+  margin-top: 5px;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 60px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  color: var(--cor-secundaria);
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+p, li {
+  font-size: 18px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* Botão menu mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle div {
+  width: 26px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: linear-gradient(to bottom, var(--cor-secundaria), var(--cor-primaria));
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
